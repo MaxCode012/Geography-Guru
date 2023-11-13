@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+
+* {
+  font-family: "PT Serif";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(221, 225, 230);
+}
+
+.globe-icon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.navbar {
+  background: linear-gradient(to right, #56ab2f, #a8e063);
+  padding: 10px;
+  color: rgb(20, 20, 20);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.links a {
+  margin: 0 10px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.5s ease;
+}
+
+.link:hover {
+  color: blanchedalmond;
+  border-bottom: 2px solid rgb(99, 93, 93);
+}
+
+.globe-img {
+  height: 220px;
+  box-shadow: 3px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.play-btn {
+  background: linear-gradient(to right, #56ab2f, #a8e063);
+  color: white;
+  text-decoration: none;
+  font-family: "PT Serif";
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  text-align: center;
+  font-size: 23px;
+}
+
+.play-btn:hover {
+  color: blanchedalmond;
+}
+
+.main {
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
