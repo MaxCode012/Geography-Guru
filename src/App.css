@@ -66,10 +66,12 @@ body {
   width: 100px;
   text-align: center;
   font-size: 23px;
+  transition: all 0.3s ease-in-out;
 }
 
 .play-btn:hover {
   color: blanchedalmond;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .main {
@@ -79,4 +81,8 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 30px;
+}
+
+.main-heading {
+  color: #121212;
 }
