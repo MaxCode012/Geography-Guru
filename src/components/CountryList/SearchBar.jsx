@@ -12,14 +12,15 @@ export const SearchBar = ({ countries, onSearch }) => {
 
   return (
     <>
-      <input
-        type="text"
-        className="search-bar"
-        placeholder="search a country"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <button onClick={filterCountries}>Search</button>
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="search a country"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button onClick={filterCountries}>Search</button>
+      </div>
     </>
   );
 };

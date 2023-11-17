@@ -3,6 +3,7 @@ import axios from "axios";
 import { CountryCard } from "../components/CountryList/index";
 import "../components/CountryList/styles.css";
 import { SearchBar } from "../components/CountryList/SearchBar";
+import { Select } from "../components/CountryList/Select";
 
 export const CountryList = () => {
   const [countries, setCountries] = useState([]);
@@ -25,22 +26,22 @@ export const CountryList = () => {
     setFilteredCountries(filteredCountries);
   };
 
+  const handleSelect = (selectedRegion) => {
+    const filteredCountries = countries.filter(
+      (country) => country.region === selectedRegion
+    );
+    setFilteredCountries(filteredCountries);
+  };
+
   return (
     <div className="countries-container">
       <div className="countries-header">
         <h2>Country List</h2>
         <div className="continent-select">
-          <label className="label" for="continents">
+          <label className="label" htmlFor="continents">
             Select the continent
           </label>
-
-          <select id="continents">
-            <option value="Europe">Europe</option>
-            <option value="Asia">Asia</option>
-            <option value="Africa">Africa</option>
-            <option value="Americas">Americas</option>
-            <option value="Oceania">Oceania</option>
-          </select>
+          <Select countries={countries} onSelect={handleSelect} />
         </div>
         <div className="country-search">
           <SearchBar countries={countries} onSearch={handleSearch} />
@@ -48,6 +49,7 @@ export const CountryList = () => {
       </div>
 
       <div className="country-list">
+        {/* DO NOT CHANGE BELOW*/}
         {filteredCountries.length > 0
           ? filteredCountries.map((country) => (
               <CountryCard
@@ -69,6 +71,7 @@ export const CountryList = () => {
                 population={country.population}
               />
             ))}
+        {/* DO NOT CHANGE ABOVE*/}
       </div>
     </div>
   );

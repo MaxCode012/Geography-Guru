@@ -27,6 +27,7 @@
 
 .countries-header {
   display: flex;
+  width: 100%;
   align-items: center;
   gap: 20px;
 }
@@ -58,4 +59,36 @@
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
+}
+
+.search {
+  margin-left: auto;
+}
+
+.search-bar {
+  display: flex;
+  flex-grow: 1;
+  margin-left: auto;
+}
+
+.search-bar input {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  background-color: #56ab2f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.search-bar button:hover {
+  background-color: #4c9021;
 }
