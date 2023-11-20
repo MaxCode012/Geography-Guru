@@ -4,10 +4,13 @@ import { CountryCard } from "../components/CountryList/index";
 import "../components/CountryList/styles.css";
 import { SearchBar } from "../components/CountryList/SearchBar";
 import { Select } from "../components/CountryList/Select";
+import CountryDetail from "../components/CountryDetail";
 
 export const CountryList = () => {
   const [countries, setCountries] = useState([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -22,6 +25,10 @@ export const CountryList = () => {
     fetchCountries();
   }, []);
 
+  const handleCountryClick = (country) => {
+    setSelectedCountry(country);
+    setIsPopupVisible(true);
+  };
   const handleSearch = (filteredCountries) => {
     setFilteredCountries(filteredCountries);
   };
@@ -59,6 +66,7 @@ export const CountryList = () => {
                 capital={country.capital && country.capital[0]}
                 region={country.region}
                 population={country.population}
+                onClick={() => handleCountryClick(country)} // Pass the click handler
               />
             ))
           : countries.map((country) => (
@@ -69,10 +77,17 @@ export const CountryList = () => {
                 capital={country.capital && country.capital[0]}
                 region={country.region}
                 population={country.population}
+                onClick={() => handleCountryClick(country)} // Pass the click handler
               />
             ))}
         {/* DO NOT CHANGE ABOVE*/}
       </div>
+      {isPopupVisible && selectedCountry && (
+        <CountryDetail
+          country={selectedCountry}
+          onClose={() => setIsPopupVisible(false)}
+        />
+      )}
     </div>
   );
 };

@@ -1,8 +1,15 @@
 import React from "react";
 
-export const CountryCard = ({ name, flags, capital, region, population }) => {
+export const CountryCard = ({
+  name,
+  flags,
+  capital,
+  region,
+  population,
+  onClick,
+}) => {
   return (
-    <div className="country-card">
+    <div onClick={onClick} className="country-card">
       <img
         height="150px"
         src={flags.svg}
