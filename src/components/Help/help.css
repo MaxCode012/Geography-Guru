@@ -1,0 +1,60 @@
+.contact-section {
+  padding-left: 2%;
+  width: 50%;
+  margin: auto;
+}
+
+.help-section {
+  width: 48%;
+  padding: 20px;
+}
+
+.help-page {
+  padding-top: 20px;
+  display: flex;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 5px;
+  height: 100px;
+  background-color: black;
+}
+
+.tip::before {
+  margin-bottom: 3px;
+  content: "\A";
+  width: 10px;
+  height: 10px;
+  background: #4c8f50;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.contact-input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.contact-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #45a049;
+}

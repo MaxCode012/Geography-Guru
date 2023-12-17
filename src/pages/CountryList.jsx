@@ -4,7 +4,7 @@ import { CountryCard } from "../components/CountryList/index";
 import "../components/CountryList/styles.css";
 import { SearchBar } from "../components/CountryList/SearchBar";
 import { Select } from "../components/CountryList/Select";
-import CountryDetail from "../components/CountryDetail";
+import CountryDetail from "../components/CountryDetail/CountryDetail";
 
 export const CountryList = () => {
   const [countries, setCountries] = useState([]);

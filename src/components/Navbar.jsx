@@ -7,7 +7,14 @@ export const Navbar = () => {
     <nav className="navbar">
       <div className="icon">
         <BsGlobeEuropeAfrica className="globe-icon" />
-        <h1>Countries Guru</h1>
+        <Link className="logo-link" to="/">
+          <h1>Geo Guru</h1>{" "}
+        </Link>
+      </div>
+      <div className="help-link">
+        <Link className="link" to="/help">
+          Help
+        </Link>
       </div>
 
       <div className="links">

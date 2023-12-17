@@ -14,8 +14,13 @@ const CountryDetail = ({ country, onClose }) => {
           <IoIosCloseCircle />
         </button>
         <h3>{country.name.common}</h3>
-        <img src={country.flags.png} alt={country.name.common} />
+        <img
+          className="flag-img"
+          src={country.flags.png}
+          alt={country.name.common}
+        />
         <p>{country.description}</p>
+        <p>{`${country.area} km²`}</p>
         <p>Population: {population}</p>
         <p>Region: {country.region || "N/A"}</p>
         <p>
@@ -25,6 +30,7 @@ const CountryDetail = ({ country, onClose }) => {
         {country.currencies && country.currencies.XOF && (
           <p>Currency: {country.currencies.XOF.name}</p>
         )}
+
         <p>
           More info on{" "}
           <Link
